@@ -6,10 +6,10 @@
 
 ### Problem Domain
 
-This lab demonstrates how to test an Express server, including mocking the server for testing, and testing its middleware.
+This lab demonstrates how to use postgreSQL and sequelize with an Express application.
 
 - [CI/CD GitHub Actions](https://github.com/brandenge/basic-express-server/actions)
-- [Back-end server url production](https://server-deployment-pract-prod.herokuapp.com/)
+- [Back-end server url production](https://basic-api-server.herokuapp.com/)
 
 ### Setup
 

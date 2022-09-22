@@ -3,13 +3,16 @@
 const express = require('express');
 const clothesRouter = require('./routes/clothes');
 const ingredientsRouter = require('./routes/ingredients');
+const notFound = require('./error-handlers/404');
+const errorHandler = require('./error-handlers/500');
+const PORT = process.env.PORT || 3002;
 
 const app = express();
 app.use(express.json());
 app.use(clothesRouter);
 app.use(ingredientsRouter);
-
-const PORT = process.env.PORT || 3002;
+app.use('*', notFound);
+app.use(errorHandler);
 
 function start() {
   app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
