@@ -9,7 +9,7 @@ const router = express.Router();
 router.post('/ingredients', ingredientsValidator, async (req, res, next) => {
   try {
     const newIngredient = await IngredientsModel.create(req.body);
-    res.status(200).send(newIngredient);
+    res.status(201).send(newIngredient);
   } catch (error) {
     next(error);
   }

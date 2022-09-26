@@ -1,7 +1,7 @@
 'use strict';
 
 function logger(req, res, next) {
-  console.log(`REQUEST: ${req.method}, ${req.originalUrl}`);
+  console.log(`REQUEST METHOD: ${req.method}, REQUEST ORIGINAL URL: ${req.originalUrl}`);
   next();
 }
 
